@@ -57,3 +57,41 @@ font-family: 'Ysabeau', sans-serif; */
 .precio button{
     background-color: antiquewhite;
 } */
+
+
+
+
+/*Carousel */
+.contenedor-imagen{
+    position: relative;
+    height: 340px;
+}
+
+.btn-carousel {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0px;
+    padding: 0px;
+    font-size: 30px;
+    color: rgba(33,33,33,0.4);
+    background: rgba(219, 219, 219, 0.4);
+    border: none;
+    top: 50%;
+    right: 25px;
+    outline: none;
+}
+
+.siguiente{
+    right: 25px;
+}
+
+.anterior{
+    left: 25px;
+}
+
+.btn-carousel:hover {
+    color: #333;
+    background: rgba(219, 219, 219, 0.9);
+}
