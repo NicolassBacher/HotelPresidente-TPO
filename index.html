@@ -22,11 +22,28 @@
                 <a href="./pages/habitaciones.html">HABITACIONES/TARIFAS</a>
                 <a href="./pages/servicios.html">SERVICIOS</a>
                 <a href="./pages/contacto.html">CONTACTO</a>
+                <a onclick=javascript:abrirClima()>CLIMA</a>
                 <label for="check" class="esconder-menu">
                 &#215
                 </label>   
         </nav>
     </header>
+
+<!-- SECCION DEL CLIMA -->
+    <section id="clima" style="display: none;">
+        <div id="pantallaOscura" class="cerrar">
+            <div class="cerrar btnCerrar"><h4 class="cerrar">cerar X</h4></div>
+            <div id="openweathermap-widget-11"></div>
+        </div>
+    </section>
+<!-- FIN SECCION CLIMA -->
+
+
+
+
+
+
+
     <section id="banner">
         <div class="contenido-banner">
         </div>
@@ -89,9 +106,59 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quod tenetur numquam eaque ut quam debitis, voluptatem labore est. Provident recusandae praesentium atque, neque quasi ratione minima maxime rem quas error non. Placeat cupiditate dolorem harum incidunt! Vel nihil quibusdam velit quae cupiditate laborum reiciendis sequi ullam similique autem? Magni quaerat, sequi placeat voluptas ad reiciendis, esse voluptatum minus modi neque reprehenderit nobis, corrupti aperiam! Deserunt tempora facilis ipsum modi ab harum iste, optio neque ducimus enim atque cumque dicta nam, quos corporis quisquam suscipit aliquam. Facere alias porro dolorum. Incidunt dolorum sunt odit qui vel, odio veritatis mollitia neque soluta. Similique in dolore impedit molestias perspiciatis, beatae architecto reiciendis eos vitae repudiandae, quisquam aut voluptas accusamus ducimus tempore qui ex distinctio? Quae, facere iste! Ex ipsum dolore delectus inventore soluta nulla mollitia quaerat tenetur dignissimos. Commodi natus ut corrupti incidunt libero repellendus officiis repellat a. Eius dicta voluptates porro?</p>
         </div>
     </section>
+    <!-- TARJETAS GIRATORIAS -->
+    <section class="tarjetas">
+        <div class="card">
+            <div class="face front">
+                <img src="./imggg/gimnasio.jpeg" alt="">
+                <h3>Gimnasio</h3>
+            </div>
+            <div class="face back">
+                <h3>Gimnasio</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <div class="link">
+                    <a href="#">Saber más</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="face front">
+                <img src="./imggg/restaurante.jpg" alt="">
+                <h3>Restaurante</h3>
+            </div>
+            <div class="face back">
+                <h3>Restaurante</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <div class="link">
+                    <a href="#">Saber más</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="card">
+            <div class="face front">
+                <img src="./imggg/sala de reuniones.jpg" alt="">
+                <h3>Centro de reuniones</h3>
+            </div>
+            <div class="face back">
+                <h3>Centro de reuniones</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <div class="link">
+                    <a href="#">Saber más</a>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <p>email@ejemplo.com <br> 84189135164</p>
     </footer>
-    <script src="js/main.js"></script>
+    
+
+    <!-- Script para el widget del clima -->
+    <script src="./js/main.js"></script>
+    <script src="http://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
+
+    
 </body>
 </html>
