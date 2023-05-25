@@ -4,9 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Braah+One&family=Dosis:wght@300&family=Roboto+Condensed:wght@300;700&family=Rubik:wght@300;500;600;700;800;900&family=Ysabeau:wght@1;100;500&display=swap" rel="stylesheet">
+    <!-- iconos -->
+    <script src="https://kit.fontawesome.com/25d52df83b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="icon" type="image/png" href="../imggg/icono H.png"/>
     <link rel="stylesheet" href="../css/estilo-servicios.css">
-    <title>Servicios</title>
+    <title>Servicios - Hotel Presidente</title>
   </head>
   <body>
     <header>
@@ -19,49 +26,212 @@
             &#8801
         </label>
         <nav class="menu">
+                <a href="../index.html">INICIO</a>
                 <a href="../pages/habitaciones.html">HABITACIONES/TARIFAS</a>
                 <a href="../pages/servicios.html">SERVICIOS</a>
                 <a href="../pages/contacto.html">CONTACTO</a>
+                <a onclick=javascript:abrirClima()>CLIMA</a>
                 <label for="check" class="esconder-menu">
                 &#215
                 </label>   
         </nav>
     </header>
+<!-- SECCION DEL CLIMA -->
+    <section id="clima" style="display: none;">
+
+      <div id="box-clima">
+          <div class="titulo-clima"><h2></h2>
+            <h5 class="cerrar">cerrar X</h5></div>
+          <div class="actual">
+              <img class='imgActual'src="" alt="">
+              <div>
+                  <h2 class="descripcionActual"></h2>
+                  <h2 class="tempActual"></h2>
+              </div>
+          </div>
+          <div class="dia0 chiquitos">
+              <h3 class="diaSemana0"></h3>
+              <img class='imgDia0'src="" alt="">
+              <h6 class="descripcionDia0"></h6>
+              <h4 class="tempMinDia0"></h4>
+              <h4 class="tempMaxDia0"></h4>
+          </div>
+          <div class="dia1 chiquitos">
+              <h3 class="diaSemana1"></h3>
+              <img class='imgDia1'src="" alt="">
+              <h6 class="descripcionDia1"></h6>
+              <h4 class="tempMinDia1"></h4>
+              <h4 class="tempMaxDia1"></h4>
+          </div>
+          <div class="dia2 chiquitos">
+              <h3 class='diaSemana2'></h3>
+              <img class='imgDia2'src="" alt="">
+              <h6 class="descripcionDia2"></h6>
+              <h4 class="tempMinDia2"></h4>
+              <h4 class="tempMaxDia2"></h4>
+          </div>
+          <div class="dia3 chiquitos">
+              <h3 class="diaSemana3"></h3>
+              <img class='imgDia3'src="" alt="">
+              <h6 class="descripcionDia3"></h6>
+              <h4 class="tempMinDia3"></h4>
+              <h4 class="tempMaxDia3"></h4>
+          </div>
+          <div class="dia4 chiquitos">        
+              <h3 class="diaSemana4"></h3>
+              <img class='imgDia4'src="" alt="">
+              <h6 class="descripcionDia4"></h6>
+              <h4 class="tempMinDia4"></h4>
+              <h4 class="tempMaxDia4"></h4>
+          </div>
+      </div>
+
+    </section>
+
     <section class="primeraSection">
-      <p> Nuestros  Servicios</p>
+      <h2>Nuestros  Servicios</h2>
     </section> 
-    
-    <div class="contenedor">
-      <div class="box">
-        <img src="../imggg/wifi-r.png" height="40px">
-        <h2>Wifi</h2>
-        <p>Alta velocidad en todo el Hotel.</p>
+
+<!-- TARJETA DE RESTAURANTE -->
+    <section class="servicio">
+      <div class="caja-servicio normal">
+        <div class="caja-titulo">
+          <h3>Gastronomía</h3>
+        </div>
+        <div class="caja-img">      
+          <img src="../imggg/restaurante.jpg" alt="Restaurante" class="imagen">
+        </div>
+        <div class="caja-texto" >
+          <p>Descubra un mix perfecto entre sabores autóctonos y creatividad gastronómica. Nuestro Chef Ejecutivo, lo invita a experimentar diversas texturas y aromas provenientes de una tierra incomparable. Además, una exclusiva cava y sommelier que lo asesorará personalmente para elegir entre alguna de las botellas provenientes de las más prestigiosas bodegas del país.</p>
+          <h4>Horarios</h4>
+          <p>Desayuno: De 6.30 a.m. a 10:30 a.m.</p>
+          <p>Almuerzo: De 12:00 p.m. a 3:00 p.m.</p>
+          <p>Cena: De 8:00 p.m. a 12:00 a.m.</p>
+          <p>Viernes y Sábado abierto hasta la 01:00 a.m</p>
+        </div>
       </div>
-      <div class="box">
-        <img src="../imggg/gimnasio-r.png" height="40px">
-        <h2>Gimnasio</h2>
-        <p>Completamente equipado y gratuito. </p>
+    </section>
+<!-- FIN TARJETA RESTAURANTE -->
+
+<!-- TARJETA DE GYM -->
+    <section class="servicio">
+      <div class="caja-servicio invertido">
+        <div class="caja-titulo">
+          <h3>Gimnasio</h3>
+        </div>
+        <div class="caja-img">      
+          <img src="../imggg/gimnasio.jpeg" alt="Gimnasio" class="imagen">
+        </div>
+        <div class="caja-texto" >
+          <p>Un espacio fitness completamente equipado con máquinas de entrenamiento de última generación destinado al deporte, el bienestar y la relajación...</p>
+          <p>Gratuito para todos los huéspedes del hotel, cuenta con todo lo que necesitas para realizar tu rutina de entrenamiento normal.</p>
+          <h4>Horarios</h4>
+          <p>Abierto de 7:00 a 22:00 h</p>
+        </div>
       </div>
-      <div class="box">
-        <img src="../imggg/aire-acondicionado-r.png" height="40px">
-        <h2>Aire acondicionado</h2>
-        <p>Frío y calor.</p>
+    </section>
+    <!-- FIN TARJETA GYM -->
+
+    <!-- TARJETA DE SALA DE REUNIONES -->
+    <section class="servicio">
+      <div class="caja-servicio normal">
+        <div class="caja-titulo">
+          <h3>Centro de reuniones</h3>
+        </div>
+        <div class="caja-img">      
+          <img src="../imggg/sala de reuniones.jpg" alt="Sala de Reuniones" class="imagen">
+        </div>
+        <div class="caja-texto" >
+          <p>Una reunión de negocios con la tranquilidad de un espacio reservado para usted. Ubicado en el octavo piso, cuenta con una mesa de directorio con capacidad hasta 12 personas y foyer de ingreso. Trabajo y armonía se combinan en la terraza privada, el punto de encuentro de una vista panorámica de los diques y la ciudad.</p>
+          <h4>Carateristicas</h4>
+          <p>Area: 600m<sup>2</sup></p>
+          <p>Capacidad: 12 personas</p>
+          <p>Servicio de Lunch y bebidas</p>
+        </div>
       </div>
-      <div class="box">
-        <img src="../imggg/servicio-al-cuarto-r.png" height="40px">
-        <h2>Servicio al cuarto</h2>
-        <p>Las 24 horas sin ningun cargo.</p>
+</section>
+<!-- FIN TARJETA SALA DE REUNIONES -->
+
+<!-- TARJETA DE SPA -->
+    <section class="servicio">
+      <div class="caja-servicio invertido">
+        <div class="caja-titulo">
+          <h3>Spa & Wellness</h3>
+        </div>
+        <div class="caja-img">      
+          <img src="../imggg/spa.jpg" alt="Sala de majsajes" class="imagen">
+        </div>
+        <div class="caja-texto" >
+          <p>Encuentre el equilibrio perfecto entre descanso y bienestar en un espacio que cuenta con todo lo necesario para recuperar la energía del cuerpo: piscina climatizada interna, salones para masajes, jacuzzi, sauna.</p>
+          <h4>Servicios</h4>
+          <p>Masajes Relax, Descontracturante, Terapéuticos y Californiano.</p>
+          <p>Tratamiento para Jet Lag.</p>
+          <p>Piedras Calientes.</p>
+          <p>Reflexología</p>
       </div>
-      <div class="box">
-        <img src="../imggg/Estacionamiento-r.png" height="40px">
-        <h2>Estacionamiento</h2>
-        <p>Parqueo propio con vigilancia las 24 horas.</p>
+    </section>
+<!-- FIN TARJETA SPA -->
+
+<!-- MINI TARJETAS SERVICIOS -->
+    <section class="tarjetas-servicios">
+      <h3 class="tit">SERVICIOS</h3>
+      <div class="contenedor">
+
+        <div class="box">
+          <img src="../imggg/wifi-r.png">
+          <h2>Wifi</h2>
+          <p>Alta velocidad en todo el Hotel.</p>
+        </div>
+        <div class="box">
+          <img src="../imggg/gimnasio-r.png">
+          <h2>Gimnasio</h2>
+          <p>Completamente equipado y gratuito. </p>
+        </div>
+        <div class="box">
+          <img src="../imggg/aire-acondicionado-r.png">
+          <h2>Aire acondicionado</h2>
+          <p>Frío y calor.</p>
+        </div>
+        <div class="box">
+          <img src="../imggg/servicio-al-cuarto-r.png">
+          <h2>Servicio al cuarto</h2>
+          <p>Las 24 horas sin ningun cargo.</p>
+        </div>
+        <div class="box">
+          <img src="../imggg/Estacionamiento-r.png">
+          <h2>Estacionamiento</h2>
+          <p>Parqueo propio con vigilancia las 24 horas.</p>
+        </div>
+        <div class="box">
+          <img src="../imggg/informacion-turistica-r.png">
+          <h2>Información turística</h2>
+          <p>Por guías muy profesionales.</p>
+        </div>
       </div>
-      <div class="box">
-        <img src="../imggg/informacion-turistica-r.png" height="40px">
-        <h2>Información turística</h2>
-        <p>Por guías muy profesionales.</p>
-      </div>
-    </div>
+    </section>
+    <footer>
+      <section class="pie-pagina">
+          
+          <div class="contacto">
+              <p>
+                  Telefono de información <br>
+                  (+54 11) 5786-7676</p>
+          </div>
+          <div class="redes">
+            <a href="https://www.facebook.com/" class="red" target="_blank">
+              <i class="fa-brands fa-facebook"></i>  
+            </a> 
+            <a href="https://www.instagram.com/" class="red" target="_blank">
+              <i class="fa-brands fa-instagram"></i>  
+            </a> 
+            <a href="https://web.whatsapp.com/" class="red" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>   
+            </a> 
+          </div>
+          <div class="copy"><p>© 2023. Todos los derechos reservados</p></div>
+          
+      </section>
+  </footer>
+  <script src="../js/main.js"></script>
   </body>
 </html>

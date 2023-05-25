@@ -1,113 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/estilo.css">
-    <title>Hotel</title>
-</head>
-<body>
-    <header>
-        
-        <h2 class="logo">Hotel <br> Presidente</h2>
-        <a href="index.html" class="enlace">
-            <img src="./imggg/logo-hotel-presidente-01.png">
-        </a>
-        <input type="checkbox" id="check">
-        <label for="check" class="mostrar-menu">
-            &#8801
-        </label>
-        <nav class="menu">
-                <a href="./pages/habitaciones.html">HABITACIONES/TARIFAS</a>
-                <a href="./pages/servicios.html">SERVICIOS</a>
-                <a href="./pages/contacto.html">CONTACTO</a>
-                <a onclick=javascript:abrirClima()>CLIMA</a>
-                <label for="check" class="esconder-menu">
-                &#215
-                </label>   
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Braah+One&family=Dosis:wght@200;300;400;500;700&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Roboto+Condensed:wght@300;700&family=Rubik:wght@300;500;600;700;800;900&family=Ysabeau:wght@1;100;500&display=swap" rel="stylesheet">
+        <!-- ICONOS -->
+        <script src="https://kit.fontawesome.com/25d52df83b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/estilo.css">
+        <link rel="icon" type="image/png" href="./imggg/icono H.png"/>
+        <title>Hotel Presidente</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo-hotel">
+                <h2 class="logo">Hotel <br> Presidente</h2>
+            <a href="index.html" class="enlace">
+                <img src="./imggg/logo-hotel-presidente-01.png">
+            </a>  
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar-menu">
+                &#8801
+            </label>
+            <nav class="menu">
+                    <a href="index.html">INICIO</a>
+                    <a href="./pages/habitaciones.html">HABITACIONES/TARIFAS</a>
+                    <a href="./pages/servicios.html">SERVICIOS</a>
+                    <a href="./pages/contacto.html">CONTACTO</a>
+                    <a onclick=javascript:abrirClima()>CLIMA</a>
+                    <label for="check" class="esconder-menu">
+                    &#215
+                    </label>   
+            </nav>
+        </header>
 
 <!-- SECCION DEL CLIMA -->
-    <section id="clima" style="display: none;">
-        <div id="pantallaOscura" class="cerrar">
-            <div class="cerrar btnCerrar"><h4 class="cerrar">cerar X</h4></div>
-            <div id="openweathermap-widget-11"></div>
-        </div>
-    </section>
-<!-- FIN SECCION CLIMA -->
+        <section id="clima" style="display: none;">
 
-
-
-
-
-
-
-    <section id="banner">
-        <div class="contenido-banner">
-        </div>
-    </section>
-    <section class="tarjeta-descripcion">
-        <div class="mapa-informacion">
-            <p>Insertar foto del hotel</p>  
-        </div>
-        <div class="sobre-nosotros">
-            <span><h3>Hotel Presidente</h3></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, magnam quas nulla enim totam deleniti assumenda porro reiciendis corrupti explicabo ad officiis minus ullam ab numquam fugit suscipit ut minima dolore placeat officia nisi! Rem nostrum beatae culpa, sed perferendis odit ad ipsam illum veniam doloribus magni, molestias saepe provident.</p>
-        </div>
-    </section>
-    <section class="tarjeta-descripcion">
-        <div class="sobre-nosotros">
-            <span><h3>Restaurante</h3></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, magnam quas nulla enim totam deleniti assumenda porro reiciendis corrupti explicabo ad officiis minus ullam ab numquam fugit suscipit ut minima dolore placeat officia nisi! Rem nostrum beatae culpa, sed perferendis odit ad ipsam illum veniam doloribus magni, molestias saepe provident.</p>
-        </div>
-        <div class="mapa-informacion">
-            <img class="img-descripcion"src="./imggg/restaurante.jpg" alt="Foto de restaurante del Hotel Presidente">
-        </div>
-    </section>
-    <section class="tarjeta-descripcion">
-        <div class="mapa-informacion">
-            <img class="img-descripcion" src="./imggg/gimnasio.jpeg" alt="Foto del Gimnasio del Hotel Presidente">
-        </div>
-        <div class="sobre-nosotros">
-            <span><h3>Gimnasio</h3></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, magnam quas nulla enim totam deleniti assumenda porro reiciendis corrupti explicabo ad officiis minus ullam ab numquam fugit suscipit ut minima dolore placeat officia nisi! Rem nostrum beatae culpa, sed perferendis odit ad ipsam illum veniam doloribus magni, molestias saepe provident.</p>
-        </div>
-    </section>
-    <section class="tarjeta-descripcion">
-        <div class="sobre-nosotros">
-            <span><h3>Hotel Presidente</h3></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, magnam quas nulla enim totam deleniti assumenda porro reiciendis corrupti explicabo ad officiis minus ullam ab numquam fugit suscipit ut minima dolore placeat officia nisi! Rem nostrum beatae culpa, sed perferendis odit ad ipsam illum veniam doloribus magni, molestias saepe provident.</p>
-        </div>
-        <div class="mapa-informacion">
-            <img src="./imggg/sala de reuniones.jpg" alt="Foto de la sala de reuniones del Hotel Presidente">
-        </div>
-    </section>
-    <section id="lista-habitaciones">
-        <div class="habitaciones">
-            <div class="habitacion1">
-                <img src="./imggg/habitacion1.jpg" class="imagen-habitacion1"alt="">
-                <div class="texto-habitacion">
-                    <h3>EL MEJOR LUGAR PARA DESCANSAR</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, accusamus nobis. Modi laboriosam, nam fugit quo quisquam perspiciatis quas est eos earum excepturi placeat aut unde corporis optio.</p>
+            <div id="box-clima">
+                <div class="titulo-clima"><h2></h2><h5 class="cerrar">cerrar X</h5></div>
+                <div class="actual">
+                    <img class='imgActual'src="" alt="">
+                    <div>
+                        <h2 class="descripcionActual"></h2>
+                        <h2 class="tempActual"></h2>
+                    </div>
                 </div>
-                <div class="boton"><a href=""class="ver-habitaciones">VER HABITACIONES</a></div>  
+                <div class="dia0 chiquitos">
+                    <h3 class="diaSemana0"></h3>
+                    <img class='imgDia0'src="" alt="">
+                    <h6 class="descripcionDia0"></h6>
+                    <h4 class="tempMinDia0"></h4>
+                    <h4 class="tempMaxDia0"></h4>
+                </div>
+                <div class="dia1 chiquitos">
+                    <h3 class="diaSemana1"></h3>
+                    <img class='imgDia1'src="" alt="">
+                    <h6 class="descripcionDia1"></h6>
+                    <h4 class="tempMinDia1"></h4>
+                    <h4 class="tempMaxDia1"></h4>
+                </div>
+                <div class="dia2 chiquitos">
+                    <h3 class='diaSemana2'></h3>
+                    <img class='imgDia2'src="" alt="">
+                    <h6 class="descripcionDia2"></h6>
+                    <h4 class="tempMinDia2"></h4>
+                    <h4 class="tempMaxDia2"></h4>
+                </div>
+                <div class="dia3 chiquitos">
+                    <h3 class="diaSemana3"></h3>
+                    <img class='imgDia3'src="" alt="">
+                    <h6 class="descripcionDia3"></h6>
+                    <h4 class="tempMinDia3"></h4>
+                    <h4 class="tempMaxDia3"></h4>
+                </div>
+                <div class="dia4 chiquitos">        
+                    <h3 class="diaSemana4"></h3>
+                    <img class='imgDia4'src="" alt="">
+                    <h6 class="descripcionDia4"></h6>
+                    <h4 class="tempMinDia4"></h4>
+                    <h4 class="tempMaxDia4"></h4>
+                </div>
+            </div>
+
+        </section>
+<!-- FIN SECCION CLIMA -->
+<!-- BANNER -->
+        <section id="banner">
+            <div class="contenido-banner">
+                <a href="#comienzo"><h2>Reserve al  <br> mejor precio</h2></a>
+            </div>
+        </section>
+
+<!-- INFO HOTEL -->
+        <section class="seccionSTD" id="comienzo">
+            <div class="tarjeta-descripcion">
+            <img src="./imggg/fachadaHotel.jpeg" alt="Hotel Presidente" > 
+            <div class="sobre-nosotros">
+                <span><h3>Hotel Presidente</h3></span>
+                <p>El Hotel Presidente se encuentra en Puerto Madero ubicado en un lugar privilegiado, a escasos metros del Rosedal de Puerto Madero y a tan solo unos minutos del río Darsena Sur, Laguna de los Coipos y la Laguna de los patos. <br> Nuestro hotel se encuentra rodeado de teatros, cines, grandes almacenes y restaurantes. Por todo ello, es una opción de alojamiento perfecta tanto para viajes de negocios como para conocer y visitar la ciudad.</p>
             </div>
         </div>
-    </section>
-    <section class="tarjeta-descripcion">
-        <div class="mapa-informacion">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.139644675578!2d-3.6979587020843767!3d40.40909228276732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42262892fe9149%3A0xaf70965b4e928185!2sRadisson%20RED%20Madrid!5e0!3m2!1ses!2sar!4v1680802806270!5m2!1ses!2sar" width="380" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa">Ubicación del Hotel</iframe>
-            <p>Direccion 00000</p>  
-        </div>
-        <div class="sobre-nosotros">
-            <span><h3>Hotel Presidente</h3></span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos quod tenetur numquam eaque ut quam debitis, voluptatem labore est. Provident recusandae praesentium atque, neque quasi ratione minima maxime rem quas error non. Placeat cupiditate dolorem harum incidunt! Vel nihil quibusdam velit quae cupiditate laborum reiciendis sequi ullam similique autem? Magni quaerat, sequi placeat voluptas ad reiciendis, esse voluptatum minus modi neque reprehenderit nobis, corrupti aperiam! Deserunt tempora facilis ipsum modi ab harum iste, optio neque ducimus enim atque cumque dicta nam, quos corporis quisquam suscipit aliquam. Facere alias porro dolorum. Incidunt dolorum sunt odit qui vel, odio veritatis mollitia neque soluta. Similique in dolore impedit molestias perspiciatis, beatae architecto reiciendis eos vitae repudiandae, quisquam aut voluptas accusamus ducimus tempore qui ex distinctio? Quae, facere iste! Ex ipsum dolore delectus inventore soluta nulla mollitia quaerat tenetur dignissimos. Commodi natus ut corrupti incidunt libero repellendus officiis repellat a. Eius dicta voluptates porro?</p>
-        </div>
-    </section>
-    <!-- TARJETAS GIRATORIAS -->
-    <section class="tarjetas">
+        </section>  
+        <hr>
+<!-- TARJETAS GIRATORIAS -->
+<section class="seccionSTD">    
+<div class="titulo-seccion">
+        <h3 color="#a19c83">SERVICIOS</h3>
+        <br>
+        <p>En el Hotel Presidente te ofrecemos una gran variedad de servicios para un mayor confort que te permitirá descansar sin preocupaciones. Contamos con un extraordinario equipo de profesionales dispuestos a ofrecerte un servicio detallado y personalizado. <br>
+            En el hotel podrás encontrar todas las facilidades necesarias para que puedas disfrutar de la ciudad. El confort, la limpieza, la dedicación y la información personalizada son aspectos que definen al hotel Presidente.</p>
+    </div>
+    
+    <div class="tarjetas">
         <div class="card">
             <div class="face front">
                 <img src="./imggg/gimnasio.jpeg" alt="">
@@ -115,9 +124,9 @@
             </div>
             <div class="face back">
                 <h3>Gimnasio</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p>El Hotel Presidente cuenta con una pequeña zona de fitness para mantenerse en forma.</p>
                 <div class="link">
-                    <a href="#">Saber más</a>
+                    <a href="./pages/servicios.html">Ver más</a>
                 </div>
             </div>
         </div>
@@ -129,9 +138,9 @@
             </div>
             <div class="face back">
                 <h3>Restaurante</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p>Disfrute de la cocina del chef Carlos, basada en productos de temporada elegidos con mimo. Se ofrecen menús para eventos y cenas.</p>
                 <div class="link">
-                    <a href="#">Saber más</a>
+                    <a href="./pages/servicios.html">Ver más</a>
                 </div>
             </div>
         </div>
@@ -143,22 +152,72 @@
             </div>
             <div class="face back">
                 <h3>Centro de reuniones</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <p>Hotel Presidente posee su propio centro de convenciones. En un espacio de 600 m2 de gran luz natural y altos techos</p>
                 <div class="link">
-                    <a href="#">Saber más</a>
+                    <a href="./pages/servicios.html">Ver más</a>
                 </div>
             </div>
         </div>
+
+    </div>
+    <a class="btn-servicio" href="./pages/servicios.html">Ver servicios</a>
+</section>
+<hr>
+    <!-- HABITACIONES -->
+<section class="seccionSTD">
+    <div class="titulo-seccion"><h3>HABITACIONES</h3></div>
+    <div class="habitaciones-inicio">
+        <img src="./imggg/habitacion.jpg" alt="">
+       
+    </div>
+     <div class="titulo-seccion">
+            <h3>Ideal para escapadas</h3>
+            <p>El hotel está situado en una zona residencial y tranquila para desconectar de la rutina diaria. Está muy bien comunicado con los lugares más emblemáticos</p>
+            <br><br>
+            <a class="btn-servicio" href="./pages/habitaciones.html">Ver habitaciones</a>
+        </div>
     </section>
+        <hr>
+    <!-- MAPA E INFORMACION DEL HOTEL -->
+    <section class="seccionSTD">
+        <div class="tarjeta-descripcion tarjetaMapa">
+        <div class="sobre-nosotros direccion">
+            <span><h3>Hotel Presidente</h3></span><br><br>
+            <p>DIRECCIÓN <br><br> Rosario Vera Peñaloza 460
+                <br> Puerto Madero Este<br><br> Buenos Aires - Argentina</p><br>
+            <hr><br>
+            <p>CONTACTO <br><br>Tel (+54 11) 5786-7676 <br><br> info@hotelpresidente.com</p>
+        </div>
+        <div class="mapa-informacion">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1842.762364369367!2d-58.361429240148304!3d-34.618592330808625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a334d0bb0bff8f%3A0xe507427ec4fb975a!2sRosario%20Vera%20Pe%C3%B1aloza%20460%2C%20C1107CGJ%20CABA!5e0!3m2!1ses!2sar!4v1684760237783!5m2!1ses!2sar" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="mapa">Ubicación del Hotel</iframe>
+        </div>
+    </div>
+    </section>
+   
     <footer>
-        <p>email@ejemplo.com <br> 84189135164</p>
+        <section class="pie-pagina">
+            
+            <div class="contacto">
+                <p>
+                    Telefono de información <br>
+                    (+54 11) 5786-7676</p>
+            </div>
+            <div class="redes">
+               <a href="https://www.facebook.com/" class="red" target="_blank">
+              <i class="fa-brands fa-facebook"></i>  
+              </a> 
+              <a href="https://www.instagram.com/" class="red" target="_blank">
+              <i class="fa-brands fa-instagram"></i>  
+              </a> 
+              <a href="https://web.whatsapp.com/" class="red" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>   
+              </a> 
+            </div>
+            <div class="copy"><p>© 2023. Todos los derechos reservados</p></div>
+            
+        </section>
     </footer>
-    
-
-    <!-- Script para el widget del clima -->
-    <script src="./js/main.js"></script>
-    <script src="http://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/d3.min.js"></script>
-
+    <script src="js/main.js"></script>
     
 </body>
 </html>

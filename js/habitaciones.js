@@ -14,7 +14,6 @@ let jrSuite = document.getElementById('jrSuite')
 function cambiarImagen(e) {
     let mostrar = null
     let ocultar = null
-    let volver = false
 
     //busco todas las etoquetas img en el nodo padre de los botones y las cargo en la variable imagenes
     let imagenes = e.target.parentNode.getElementsByTagName('img')
@@ -58,17 +57,16 @@ function cambiarHabitacion(e, estado = false) {
     let cambiar = null
 
     //por medio del forEach pongo el color de fondo a todos los botones al estandar
-    btnSelector.forEach((boton) => { boton.style.backgroundColor = '#D1CAAB' })
+    btnSelector.forEach((boton) => { boton.style.backgroundColor = '#b8ab6d' })
 
     if (estado == false) {
         //cambio el color de fondo del boton presionado
-        e.target.style.backgroundColor = '#bbaf80'
+        e.target.style.backgroundColor = '#7e764d'
         cambiar = e.target.name
     }
     else {
         btnSelector.forEach((boton) => {
-            console.log(boton.name, e)
-            if (e == boton.name) { boton.style.backgroundColor = '#bbaf80' }
+            if (e == boton.name) { boton.style.backgroundColor = '#7e764d' }
         })
 
 
@@ -78,16 +76,16 @@ function cambiarHabitacion(e, estado = false) {
     //a travez del atributo name del boton busca cual seccion encender a travez de su id. El id de la seccoin y el atributo name del boton deben ser iguales 
     switch (cambiar) {
         case sencilla.id:
-            sencilla.style.display = 'block'
+            sencilla.style.display = 'flex'
             break
         case doble.id:
-            doble.style.display = 'block'
+            doble.style.display = 'flex'
             break
         case triple.id:
-            triple.style.display = 'block'
+            triple.style.display = 'flex'
             break
         case jrSuite.id:
-            jrSuite.style.display = 'block'
+            jrSuite.style.display = 'flex'
             break
     }
 }
