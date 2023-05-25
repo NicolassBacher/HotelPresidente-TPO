@@ -3,11 +3,11 @@
     margin: 0;
     text-decoration: none;
 }
-
+    
 /* HEADER */
 header{
     height: 100px;
-    background-color:#D1CAAB;
+    background-color:#b8ab6d;
     padding: 0px 50px;
     color:white;
     display: flex;
@@ -17,15 +17,20 @@ header{
     left: 0;
     top: 0;
     right: 0;
+    z-index: 20;
 }
-
+.logo-hotel{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .logo{
     text-transform: uppercase;
     color:white;
     font-weight: 200;
     text-align: center;
     position: absolute;
-    left: 120px;
+    left: 10%;
 }
 
 .enlace img{
@@ -41,6 +46,7 @@ header{
     text-transform:uppercase;
     padding: 0 8px;
     transition: 0.6s;
+    cursor: pointer;
 }
 .menu{
     display: inline-block;
@@ -68,144 +74,560 @@ header{
 }
 /* BANNER */
 #banner{
-    margin-top: 80px;
-    padding: 0px 50px;
-    background-image:url(../imggg/copia.jpeg);
-    height: 700px;
-    width: 93.4%;
+    top: 100px;
+    margin-top: 100px;
+    background-image:url(../imggg/lobby-hotel-scaled2.jpg);
+    background-attachment: fixed;
+    height: calc(100vh - 100px);
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-/* MAPA Y SORE NOSOTROS */
-.tarjeta-descripcion{
-    padding-top: 10px;
-    padding-left: 10px;
-    margin: 20px 100px;
-    /* border: 1.5px solid grey; */
-    justify-content: space-between;
+.contenido-banner{
+    font-family: 'Josefin Sans', sans-serif;
+    /* text-transform: uppercase; */
+
     display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    width: 95%;
+    height: 90%;
+}
+
+.contenido-banner h2{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.123);
+    border-radius:10%;
+    padding: 40px;
+    margin-top: 50vh;
+    font-size:10vh;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* MAPA Y SORE NOSOTROS */
+.seccionSTD{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px 50px 0px;
+}
+#comienzo{
+    margin: 0px 0px 50px 0px;
+    padding-top: 110px;
+}
+.tarjeta-descripcion{
+    width: 90vw;
+    padding: 20px 30px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
     box-shadow:
     inset 0 -3em 3em rgba(0,0,0,0.1),
           0 0  0 2px rgb(255,255,255),
-          0.3em 0.3em 1em rgba(0,0,0,0.3)
+          0.3em 0.3em 1em rgba(0,0,0,0.3);
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+.tarjeta-descripcion img{
+    width: 60%;
+    margin: 20px;
+    border-radius: 20px;
+    object-fit: contain;
+    box-sizing: border-box;
 }
 
-.mapa-informacion img{
-    max-width: 330px;
-    max-height: 200px;
-    padding: 10px;
-}
-
-.mapa-informacion p{
-    padding: 10px 100px;
-    font-style: italic;
-    font-family:'Times New Roman', Times, serif;
-    font-size: large;
-    font-weight: 200;
+.sobre-nosotros{
+    width: 40%;
+    margin: 10px;
 }
 
 .sobre-nosotros h3{
-    padding-left: 50px;
     padding-top: 0%;
     font-size:x-large;
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
-    font-family:'Times New Roman', Times, serif;
-    justify-content: right;
+    font-family: 'Josefin Sans', sans-serif;
+    letter-spacing: 3px;
+    justify-content:center;
     text-align:center;
     margin-top: 0px;
-    color: #6D4008;
+    color:#b8ab6d;
 }
 .sobre-nosotros p{
-    padding-left: 50px;
-    padding-right: 50px;
-    color:darkgrey;
-    text-align: center;
+    color:#666;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 200;
 }
-/* HABITACIONES */
-#lista-habitaciones{
-    background-color: #EDEAD7;
-    padding: 10px;
+
+.tarjetaMapa{
+    padding: 20px;
 }
-.habitaciones{
-    margin: 10px 100px;
-    border: 0.3px solid black;
-    display: flex;
-    justify-content:center;
-    box-shadow: inset 0 -2em 2em rgba(0,0,0,0.1),
-                      0 0  0 2px rgb(255,255,255),
-                      0.2em 0.2em 0.5em rgba(0,0,0,0.3);
-    background-color: white;
-}
-.habitacion1{
-    margin-top: 10px;
-    padding: 10px 10px;
-    display: flex;
-    justify-content:space-between;
-}
-.texto-habitacion h3{
-    font-size: x-large;
-    font-weight: 450;
-    padding: 10px 15%;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #D6B792;
-    text-align: justify;
-    
-}
-.imagen-habitacion1{
+.direccion{
     width: 40%;
-    margin: 20px;
-    padding-right: 0px;
+    margin: 0px;
+    padding: 5px 15px 5px 5px;
+    box-sizing: border-box;
 }
-.texto-habitacion p{
-    padding-top: 10px;
-    margin-top: 10px;
-    text-align:center;
-    align-items: baseline;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    position: relative;
+
+.mapa-informacion{
+    width: 60%;
+    padding: 5px 5px 5px 15px;
+    box-sizing: border-box;
+}
+.mapa{
+    width: 100%;
+}
+
+/* Seccion del clima */
+#clima{
+    position: fixed;
+    top: 100px;
+    width: 100%;
+    z-index: 25;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#box-clima {
+    position: absolute;
+    display: grid;
+    top: 10px;
+    width: 380px;
+    height: 400px;
+    right: 10px;
+    /* Widget Horizontal */
+    /* grid-template-areas:
+        "titulo titulo titulo titulo titulo titulo titulo titulo titulo titulo titulo titulo titulo titulo"
+        "actual actual actual actual dia0 dia0 dia1 dia1 dia2 dia2 dia3 dia3 dia4 dia4"
+        "actual actual actual actual dia0 dia0 dia1 dia1 dia2 dia2 dia3 dia3 dia4 dia4"
+        "actual actual actual actual dia0 dia0 dia1 dia1 dia2 dia2 dia3 dia3 dia4 dia4";
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
     
+    grid-template-areas: 
+        'titulo titulo titulo titulo titulo'
+        'actual actual actual actual actual'
+        'actual actual actual actual actual'
+        'actual actual actual actual actual'
+        'dia0 dia1 dia2 dia3 dia4'
+        'dia0 dia1 dia2 dia3 dia4'
+        'dia0 dia1 dia2 dia3 dia4'
+        'dia0 dia1 dia2 dia3 dia4'
+        'dia0 dia1 dia2 dia3 dia4'
+        'dia0 dia1 dia2 dia3 dia4';
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    color: white;
 }
-.habitacion1 .boton{
-    position:relative;
+
+#box-clima > .titulo-clima {
+    grid-area: titulo;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    padding: 0px 15px 0px 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(2,136,209, 0.9);
 }
-.habitacion1 .boton .ver-habitaciones{
-    display:inline-block;
-    border: 1px gray solid;
-    font-size: medium;
-    padding: 10px;
-    margin:280px 0px 10px 0px;
-    background-color:grey;
-    color:rgb(255, 255, 255);
-    align-items: baseline;
-    transition: 1s;
-    text-align: center;
+#box-clima > .actual {
+    grid-area: actual;
+    border-top: solid  #49e5fe;  
+    border-bottom: solid  #49e5fe;  
+    background-color: rgba(2,136,209, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
-.habitacion1 .boton .ver-habitaciones:hover{
-    background-color:rgb(202, 162, 103);
-    color:aliceblue;
+#box-clima > .dia0 {
+    grid-area: dia0;
     border: none;
+    border-bottom-left-radius: 25px;
 }
-/* pie de pagina */
+#box-clima > .dia1 {
+    grid-area: dia1;
+}
+#box-clima > .dia2 {
+    grid-area: dia2;
+}
+#box-clima > .dia3 {
+    grid-area: dia3;
+}
+#box-clima > .dia4 {
+    grid-area: dia4;
+    border-bottom-right-radius: 20px;
+}
+.titulo-clima h2{
+    font-size: 1.1rem;
+}
+
+.cerrar {
+    color: #49e5fe;
+    border: solid #49e5fe;
+    border-radius: 25px;
+    padding: 2px 5px 5px 5px;
+    cursor:pointer;
+}
+.chiquitos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(2,136,209, 0.9);
+    border-left: solid #49e5fe;
+    border-width: 95%;
+}
+
+.chiquitos h6{
+    text-align: center;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.actual img {
+    width: 40%;
+}
+
+.actual div{
+    width: 60%;
+    height: 100%;
+    padding: 10px 10px 10px 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* TARJETAS GIRATORIAS */
+.titulo-seccion{
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: x-large;
+    /* margin-top: 50px; */
+    margin: 20px 100px;
+    color:#b8ab6d;
+    letter-spacing: 3px;
+}
+.titulo-seccion p{
+    color:#888;
+    letter-spacing: normal;
+    font-size: large;
+}
+.tarjetas {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+}
+.card {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin: 0px 40px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 1.2s;
+    box-sizing: border-box;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    font-size: medium;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0,0,0,.4);
+    text-align: center;
+    font-family:'Ysabeau', sans-serif;
+    text-transform: uppercase;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: #b8ab6d;
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: #f3f3f3;
+    font-family: 'Ysabeau', sans-serif;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.card .back p {
+    letter-spacing: 0.8px;
+    font-family: 'Ysabeau', sans-serif;
+} 
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+hr{
+    width: 80%;
+    margin: 20px 10% 20px 10%;
+}
+
+
+/* HABITACIONES */
+.habitaciones-inicio{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-height: 350px;
+    margin: 20px 0px;
+}
+.habitaciones-inicio img{
+    border-radius: 5%;
+    width: 550px;
+    object-fit: cover;
+}
+.btn-servicio{
+    background-color: #b8ab6d;
+    padding: 15px;
+    color: white;
+    box-shadow: 3px 3px rgba(185, 185, 185, 0.4);
+    font-size: x-large;
+    margin: 30px;
+    border-radius:10px;
+}
+.btn-servicio:hover{
+    background-color: #cfc380;
+    color: chocolate;
+}
+/* FOOTER */
 footer{
-    height: 100px;
-    background-color:#D1CAAB;
-    padding: 0px 50px;
-    color:white;
+    background-color: #b8ab6d;
+    width: 100%;
+    height: auto !important;
+}
+.pie-pagina{
+    height: 100%;
+    background-color: #b8ab6d;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+
+}
+.contacto{
+    color: #fff;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-size: larger;
+    padding: 5px;
     justify-content: center;
 }
+.redes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+footer .red{
+    align-items: center;
+    color: white;
+    transition: 1s;
+    margin: 0 10px;
+}
+.red:hover{
+    color: chocolate;
+}
+.copy p {
+    color: white;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    margin: 10px;
+}
+
 /* RESPONSIVE */
-@media screen and (max-width:750px){
+@media only screen and (max-width:1100px){
+    .logo{
+        display: none;
+    }
+
+    .contenido-banner{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .contenido-banner h2{
+        padding: 10px;
+        margin-top: 60vh;
+        font-size: 8vh;
+        text-align: center;
+    }
+    /* INFO HOTEL */
+    .tarjeta-descripcion img{
+        width: 55%;
+        margin: 15px;
+    }
+    .sobre-nosotros{
+        width: 45%;
+    }
+    /* TARJETAS GIRATORIAS */
+    .tarjetas{
+        width: 90%;
+        display: flex;
+    }
+    .card{
+        display: block;
+        width: 200px;
+        margin: 20px 3%;
+    }
+    /* .card:hover .front{
+        transform: none;
+    }
+    .card .back{
+        display: none;
+        transform: none;
+    } */
+}
+
+@media only screen and (max-width:950px){
+    .menu a{
+        font-size: 0.85rem;
+    }
+    header{
+        height: 80px;
+        padding-right: 20px;
+    }
+
+    .enlace img{
+        height: 60px;
+    }
+    #banner{
+        top: 80px;
+        margin-top: 80px;
+        height: calc(100vh - 80px);
+    }
+    
+    .tarjetas{
+        flex-direction: column;
+    }   
+    .card{
+        width: 450px;
+        height: 350px;
+    }
+    .tarjeta-descripcion{
+        flex-direction: column;
+    }
+    .tarjeta-descripcion img{
+        width: 90%;
+        margin: 15px;
+    }
+    .sobre-nosotros{
+        width: 90%;
+    }
+    .tarjetaMapa{
+        flex-direction: row;
+    }
+    .direccion{
+        width: 35%;
+    }
+    .direccion h3{
+        font-size: large;
+        margin-top: 15px;
+    }
+    .direccion p{
+        font-size:small;
+    }
+    .mapa-informacion{
+        width: 65%;
+    }
+    .mapa{
+        height: 350px;
+    }
+        /* HABITACIONES */
+    .habitaciones-inicio img{
+        width: 450px; 
+        height: 300px;
+    }
+}
+@media only screen and (max-width:700px){
+    .tarjetaMapa{
+        flex-direction: column;
+    }
+    .direccion{
+        width: 95%;
+        padding: 0px;
+        margin:0px;
+    }
+    .mapa-informacion{
+        width: 95%;
+        padding: 0px;
+        margin: 0px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .btn-servicio{
+        font-size: large;
+    }
+}
+
+@media only screen and (max-width:600px){
+    /* HEADER */
+    .logo{
+        display: none;
+    }
     .mostrar-menu, .esconder-menu{
         display: block;
     }
     .menu{
-        position: fixed;
+        position:fixed;
         width: 100%;
         height: 100vh;
-        background-color: cornsilk;
+        background-color:#D1CAAB;
         right: -100%;
         top: 0;
         text-align: center;
@@ -219,75 +641,127 @@ footer{
 
     }
     .esconder-menu{
-        position: absolute;
+        position:absolute;
         top: 40px;
         right: 40px;
+        padding: 0;
+        margin: 0;
     }
     #check:checked ~ .menu{
         right: 0;
     }
-    #banner{
-        /* width: 83.2%; */
-        height: 75vh;
-        width: auto;
-    }
-    /* #banner::before{
-        width: 100%;
-        height: 72vh;
-    } */
+    /* BANNER */
 
-    #ubicacion{
-        flex-direction: column;
-        width: 80%;
-        margin-left: 50px;
-        padding-top: 5px;
-        padding-left: 5px;
-        align-items: center;
-    }
-    .mapa-informacion p{
-        padding-left: 30%;
-    }
-    .sobre-nosotros h3{
-        padding-left: 0%;
-    }
-    .sobre-nosotros p{
-        padding-left: 2%;
-        align-items: center;
-    }
-    #lista-habitaciones{
-        flex-direction: column;
-        display: block;
-    }
-    .habitaciones{
-        flex-direction: column;
-        margin: 10px;
-        display: block;
-    }
-    .habitacion1{
-        flex-direction: column;
-    }
-    .imagen-habitacion1{
-        width: 95%;
-        height: 50vh;
-    }
-    .texto-habitacion h4{
-        margin-left: 0px;
-        padding: 5px 30%;
-        align-items: center;
-    }
-    .texto-habitacion p{
+    .contenido-banner h2{
         padding: 10px;
+        margin-top: 35vh;
+        font-size: 4vh;
         text-align: center;
+        
+    }
+    /* INFO HOTEL */
+    .tarjeta-descripcion{
+        justify-content:center;
+        align-items: center;
+        margin: 30px 0px 30px 0px;
+        padding: 5px;
+        width: 90%;
     }
 
-    .habitacion1 .boton .boton-reservar{
-        width: 20%;    
+    .sobre-nosotros h3, p{
+        font-size: medium;
+        text-align: center;
+        align-items: center;
         justify-content: center;
-        margin: 10px;
-        padding: 1.5%;
-        align-items: baseline;
-        margin-inline: 40%;
-    
+        margin-bottom: 20px;
+    }
+    /* TARJETAS GIRATORIAS */
+    .titulo-seccion{
+        width:90%;
+        text-align: center;
+        font-size:medium;
+        margin: 10px 5%;
+        padding: 0;
+    }
+    .card{
+        margin: 20px 5% ;
+        width: 90%;
+        height: 50vh;
+        display: block;
+        justify-content: center;
+        align-items: center;
+    }
+    /* .card:hover .front{
+        transform: none;
+    }
+    .card .back{
+        display: none;
+        transform: none;
+    } */
+    /* HABITACIONES */
+    .habitaciones-inicio img{
+        width: 75vw; 
+        height: 50vw;
+    }
+    /* MAPA */
+    .tarjetaMapa{
+        *margin: 0px;
+        align-items: center;
+        justify-content: center;
     }
 
+
+    
+    .mapa-informacion .mapa{
+        width: 90%;
+
+    }
+    footer{
+        width:contain;
+    }
+}
+
+
+/* RESPONSIVE PARA CONTROL VERTICAL */
+@media only screen and (max-height:500px){
+
+    #box-clima{
+        width: 550px;
+        height: 230px;
+        grid-template-areas: 
+        'titulo titulo titulo titulo titulo titulo titulo titulo'
+        'actual actual actual dia0 dia1 dia2 dia3 dia4';
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 30px 1fr;
+    top: 2px;
+    }
+    
+    .chiquitos{
+        border-left: solid #49e5fe !important;
+        font-size: 0.9rem;
+    }
+    #box-clima > .actual {
+        border-bottom: none;
+        border-top: none;
+        border-bottom-left-radius: 25px;
+        flex-direction: column;
+    }
+    #box-clima > .dia0 {
+        border-bottom-left-radius: 0px;
+    }
+    #box-clima > .titulo-clima {
+        border-bottom: solid #49e5fe;
+    }
+.titulo-clima h2{
+    font-size: 1.1rem;
+}
+.cerrar{
+    font-size: 0.8rem;
+    padding: 1px 8px 1px 8px;
+}
+
+    .actual img {
+        width: 85%;
+        margin-top: 20px;
+    }
 }

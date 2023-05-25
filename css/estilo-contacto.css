@@ -1,3 +1,187 @@
+/* RESET de algunas prpoiedades de bootstrap para seguir visualizando el mismo estilo de pagina */
+*{
+    text-decoration: none !important;
+}
+body{
+    height: 100%;
+}
+
+header{
+    font-family: 'Times New Roman', Times, serif;
+}
+
 .primeraSection {
-    margin-top: 100px;
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    padding-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin-bottom: 0px;
+}
+h1{
+    font-size: 2em ;
+}
+h2{
+    font-size: 1.5em;
+}
+h3{
+    font-size: 1.17em;
+}
+h4{
+    font-size: 1em;
+}
+h5{
+    font-size: 0.83em;
+}
+h6{
+    font-size: 0.67em ;
+}
+
+form {
+    color: #333;
+    margin-top: 20px;
+    font-size: 0.89rem;
+    width: 50%;
+}
+
+form div{
+    margin-bottom: 13px;
+}
+
+.col{
+    margin-bottom: 0px;
+}
+
+.aclaracion{
+    font-size: 0.85rem;
+    color: #888;
+    margin: 5px 0px 20px 0px;
+}
+
+.formulario{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.redes-contacto {
+
+    width: 40%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.item-contacto{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 300px;
+}
+
+.imag{
+    width: 50px;
+    height: 50px;
+    margin: 5px 15px 5px 5px;
+}
+
+.contacto p {
+    margin-block-end: 0px;
+}
+
+
+
+@media only screen and (max-width:600px) {
+    .primeraSection{
+        flex-direction: column-reverse;
+        padding-top: 80px;
+    }
+    .formulario{
+        width: 100%;
+    }
+    form{
+        width: 80%;
+        font-size: 0.8rem;
+
+    }
+
+    #nombre, #apellido{
+        min-width: 190px;
+    }
+
+    .redes-contacto{
+        height: 400px;
+        font-size: 0.75rem;
+        width: 100vw;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .item-contacto{
+        width: 215px;
+    }
+
+    .redes-contacto img {
+        width: 30px;
+        height: 30px;
+    }
+
+    label {
+        margin-top: 10px;
+    }
+    .row, .mb-3 {
+        margin-bottom: 0px !important;
+    }
+
+}
+
+@media only screen and (min-width:600px) and (max-width:950px) {
+    .primeraSection{
+        width: 100vw;
+        align-items: start;
+        padding-top: 80px;
+    }
+
+    .formulario {
+        width: 50%;
+    }
+    form{
+        width: 90%;
+        font-size: 0.75rem;
+    }
+
+    #nombre, #apellido{
+        min-width: 190px;
+    }
+
+    .redes-contacto{
+        font-size: 0.8rem;
+        align-items: normal;
+        height: 500px;
+    }
+
+    .redes-contacto img {
+        width: 40px;
+        height: 40px;
+    }
+    form div{
+        margin-bottom: 12px;
+    }
+
+    .item-contacto{
+        width: 100%;
+        padding-left: 20px;
+    }
+    label {
+        margin-top: 10px;
+    }
+    .row, .mb-3 {
+        margin-bottom: 0px !important;
+    }
 }

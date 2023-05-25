@@ -1,32 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="stylesheet" href="../css/estilo-contacto.css">
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-        <h2 class="logo">Hotel <br> Presidente</h2>
-        <a href="../index.html" class="enlace">
-            <img src="../imggg/logo-hotel-presidente-01.png">
-        </a>
-        <input type="checkbox" id="check">
-        <label for="check" class="mostrar-menu">
-            &#8801
-        </label>
-        <nav class="menu">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+        <!-- iconos -->
+        <script src="https://kit.fontawesome.com/25d52df83b.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/estilo.css">
+        <link rel="icon" type="image/png" href="../imggg/icono H.png"/>
+        <link rel="stylesheet" href="../css/estilo-contacto.css">
+
+        <title>Contacto - Hotel Presidente</title>
+    </head>
+
+    <body>
+        <header>
+            <h2 class="logo">Hotel <br> Presidente</h2>
+            <a href="../index.html" class="enlace">
+                <img src="../imggg/logo-hotel-presidente-01.png">
+            </a>
+            <input type="checkbox" id="check">
+            <label for="check" class="mostrar-menu">
+                &#8801
+            </label>
+            <nav class="menu">
+                <a href="../index.html">INICIO</a>
                 <a href="../pages/habitaciones.html">HABITACIONES/TARIFAS</a>
                 <a href="../pages/servicios.html">SERVICIOS</a>
                 <a href="../pages/contacto.html">CONTACTO</a>
+                <a onclick=javascript:abrirClima()>CLIMA</a>
                 <label for="check" class="esconder-menu">
                 &#215
-                </label>   
-        </nav>
-    </header>
-    <section class="primeraSection"><p style="text-align: center; font-size: 40px;">pagina de contacto, en construccion</p></section>
-  </body>
+                </label>
+            </nav>
+        </header>
+
+        <!-- SECCION DEL CLIMA -->
+        <section id="clima" style="display: none;">
+
+            <div id="box-clima">
+                <div class="titulo-clima"><h2>CIUDAD </h2><h5 class="cerrar">cerrar X</h5></div>
+                <div class="actual">
+                    <img class='imgActual'src="" alt="">
+                    <div>
+                        <h2 class="descripcionActual"></h2>
+                        <h2 class="tempActual"></h2>
+                    </div>
+                </div>
+                <div class="dia0 chiquitos">
+                    <h3 class="diaSemana0"></h3>
+                    <img class='imgDia0'src="" alt="">
+                    <h6 class="descripcionDia0"></h6>
+                    <h4 class="tempMinDia0"></h4>
+                    <h4 class="tempMaxDia0"></h4>
+                </div>
+                <div class="dia1 chiquitos">
+                    <h3 class="diaSemana1"></h3>
+                    <img class='imgDia1'src="" alt="">
+                    <h6 class="descripcionDia1"></h6>
+                    <h4 class="tempMinDia1"></h4>
+                    <h4 class="tempMaxDia1"></h4>
+                </div>
+                <div class="dia2 chiquitos">
+                    <h3 class='diaSemana2'></h3>
+                    <img class='imgDia2'src="" alt="">
+                    <h6 class="descripcionDia2"></h6>
+                    <h4 class="tempMinDia2"></h4>
+                    <h4 class="tempMaxDia2"></h4>
+                </div>
+                <div class="dia3 chiquitos">
+                    <h3 class="diaSemana3"></h3>
+                    <img class='imgDia3'src="" alt="">
+                    <h6 class="descripcionDia3"></h6>
+                    <h4 class="tempMinDia3"></h4>
+                    <h4 class="tempMaxDia3"></h4>
+                </div>
+                <div class="dia4 chiquitos">
+                    <h3 class="diaSemana4"></h3>
+                    <img class='imgDia4'src="" alt="">
+                    <h6 class="descripcionDia4"></h6>
+                    <h4 class="tempMinDia4"></h4>
+                    <h4 class="tempMaxDia4"></h4>
+                </div>
+            </div>
+
+        </section>
+        <!-- FIN SECCION CLIMA -->
+
+        <section class="primeraSection">
+            <div class="redes-contacto">
+                <div class="item-contacto">
+                    <img class="imag direccion"src="../imggg/contacto/dirección.png" alt="">
+                    <div>
+                        <h2>Direccion</h2>
+                        <h4><a href="https://www.google.com.ar/maps" target="_blank"> Rosario Vera Peñaloza 460 <br> Puerto Madero Este <br>Buenos Aires - Argentina </a></h4>
+                    </div>
+                </div>
+                    <div class="item-contacto">                    
+                        <img class="imag" src="../imggg/contacto/whatsapp.gif" alt="">
+                        <div>
+                            <h2>Whatsapp</h2>
+                            <h4><a href="tel:+5401199999999">(+54 11) 5786-7676</a></h4>
+                        </div>
+                    </div>
+                <div class="item-contacto">                    
+                    <img class="imag"src="../imggg/contacto/instagram.gif" alt="">
+                    <div>
+                        <h2>instagram</h2>
+                        <h4><a href="https://www.instagram.com" target="_blank">@hotelPresidente</a></h4>
+                    </div>
+                </div>
+                <div class="item-contacto">                    
+                    <img class="imag" src="../imggg/contacto/facebook.gif" alt="">
+                    <div>
+                        <h2>facebook</h2>
+                        <h4><a href="https://www.facebook.com" target="_blank">/hotelPresidente</a></h4>
+                    </div>
+                </div>
+                <div class="item-contacto">                    
+                    <img class="imag" src="../imggg/contacto/mensaje.gif" alt="">
+                    <div>
+                        <h2>Email</h2>
+                        <h4><a href="mailto:hotelPresidente@tpo.com">info@hotelpresidente.com</a></h4>
+                    </div>
+                </div>
+
+            </div>
+            <div class="formulario">
+                <form class="needs-validation" action="https://formspree.io/f/xknaeava" method="post" novalidate>
+                    <div class="row">
+                        <div class="col">
+                            <label for="nombre" class="form-label">Nombre *</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre aquí" maxlength="25" required>
+                            <div class="valid-feedback">
+                                Luce bien!
+                            </div>
+                        </div>
+                        <div class="col">
+                            <label for="apellido" class="form-label">Apellido: *</label>
+                            <input type="text" class="form-control" id="apellido" name='apellido' placeholder="Ingrese su apellido aquí" maxlength="25" required>
+                            <div class="valid-feedback">
+                                Luce Bien!
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col mb-3">
+                        <label for="email" class="form-label">Email: *</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" inputmode="email" required>
+                        <div class="valid-feedback">
+                            Luce bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Escriba un Email valido. nombre@ejemplo.com
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tel" class="form-label">Telefono: *</label>
+                        <input type="tel" class="form-control" id="tel" name="tel" placeholder="Codigo de area + numero sin 0 ni 15" inputmode="tel" required>
+                        <div class="valid-feedback">
+                            Luce bien!
+                        </div>
+                        <div class="invalid-feedback">
+                            Escriba un telefono valido.
+                        </div>
+                    </div>
+                        <div class="mb-3">
+                        <label for="habitacion" class="form-label">Seleccione su Habitación:</label>
+                        <select class="form-select" aria-label="Default select example" id="habitacion" name="habitacion">
+                        <option selected></option>
+                        <option value="Sencilla">Habitación Sencilla</option>
+                        <option value="doble">Habitación doble</option>
+                        <option value="jr suite">Habitación jr suite</option>
+                        <option value="deluxe">Habitación deluxe</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="check-in" class="form-label">Check-in:</label>
+                        <input type="date" class="form-control" id="check-in" name="check-in" >
+                        <div class="invalid-feedback">
+                            La fecha debe ser igual o mayor a la de hoy.
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="Check-out" class="form-label">Check-out:</label>
+                        <input type="date" class="form-control" id="check-out" name="check-out">
+                        <div class="invalid-feedback">
+                            La fecha debe ser mayor a la del check-In.
+                        </div>
+                    </div>
+                </div>
+                    <div class="mb-3">
+                        <label for="consulta" class="form-label">Consulta: *</label>
+                        <textarea class="form-control" id="consulta" name="consulta" rows="3" placeholder="Ingrese su consulta Aquí" required></textarea>
+                    </div>
+                    <button type="submit" id="enviar" class="btn btn-primary">Enviar</button>
+                    <button type="reset" class="btn btn-primary">Reset</button>
+                    <p class="aclaracion">* Campos obligatorios</p>
+                </form>
+
+            </div>
+        </section>
+
+        <footer>
+            <section class="pie-pagina">
+                
+                <div class="contacto">
+                    <p>
+                        Telefono de información <br> (+54 11) 5786-7676</p>
+                       
+                </div>
+                <div class="redes">
+                   <a href="https://www.facebook.com/" class="red" target="_blank">
+                  <i class="fa-brands fa-facebook"></i>  
+                  </a> 
+                  <a href="https://www.instagram.com/" class="red" target="_blank">
+                  <i class="fa-brands fa-instagram"></i>  
+                  </a> 
+                  <a href="https://web.whatsapp.com/" class="red" target="_blank">
+                  <i class="fa-brands fa-whatsapp"></i>   
+                  </a> 
+                </div>
+                <div class="copy"><p>© 2023. Todos los derechos reservados</p></div>
+            </section>
+        </footer>
+        <script src="../js/main.js"></script>
+        <script src="../js/contacto.js"></script>
+
+    </body>
 </html>
