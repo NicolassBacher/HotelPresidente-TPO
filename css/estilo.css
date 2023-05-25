@@ -87,11 +87,9 @@ header{
 
 .contenido-banner{
     font-family: 'Josefin Sans', sans-serif;
-    /* text-transform: uppercase; */
-
     display: flex;
     justify-content:flex-end;
-    align-items: center;
+    align-items: flex-end;
     width: 95%;
     height: 90%;
 }
@@ -101,7 +99,6 @@ header{
     background-color: rgba(0, 0, 0, 0.123);
     border-radius:10%;
     padding: 40px;
-    margin-top: 50vh;
     font-size:10vh;
     font-weight: 400;
     letter-spacing: 2px;
@@ -503,7 +500,6 @@ footer .red{
     }
     .contenido-banner h2{
         padding: 10px;
-        margin-top: 60vh;
         font-size: 8vh;
         text-align: center;
     }
@@ -627,7 +623,7 @@ footer .red{
         position:fixed;
         width: 100%;
         height: 100vh;
-        background-color:#D1CAAB;
+        background-color:#b8ab6d;
         right: -100%;
         top: 0;
         text-align: center;
@@ -654,7 +650,6 @@ footer .red{
 
     .contenido-banner h2{
         padding: 10px;
-        margin-top: 35vh;
         font-size: 4vh;
         text-align: center;
         
