@@ -700,7 +700,7 @@ footer .red{
     }
     /* MAPA */
     .tarjetaMapa{
-        *margin: 0px;
+        /* *margin: 0px; */
         align-items: center;
         justify-content: center;
     }

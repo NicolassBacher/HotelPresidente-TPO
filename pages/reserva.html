@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Braah+One&family=Dosis:wght@300&family=Roboto+Condensed:wght@300;700&family=Rubik:wght@300;500;600;700;800;900&family=Ysabeau:wght@1;100;500&display=swap" rel="stylesheet">
+        <!-- iconos -->
+        <script src="https://kit.fontawesome.com/25d52df83b.js" crossorigin="anonymous"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/estilo.css">
+        <link rel="icon" type="image/png" href="../imggg/icono H.png"/>
+        <link rel="stylesheet" href="../css/estilo-habitaciones.css">
+        <title>Consultas - Hotel Presidente</title>
+      </head>
+    
+      <body>
+        <header>
+          <h2 class="logo">Hotel <br> Presidente</h2>
+          <a href="../index.html" class="enlace">
+              <img src="../imggg/logo-hotel-presidente-01.png">
+          </a>
+          <input type="checkbox" id="check">
+          <label for="check" class="mostrar-menu">
+              &#8801
+          </label>
+          <nav class="menu">
+                  <a href="../pages/consultas.html">RESERVA</a>
+                  <a href="../pages/habitaciones.html">HABITACIONES/TARIFAS</a>
+                  <a href="../pages/servicios.html">SERVICIOS</a>
+                  <a href="../pages/contacto.html">CONTACTO</a>
+                  <a onclick=javascript:abrirClima()>CLIMA</a>
+                  <label for="check" class="esconder-menu">
+                  &#215
+                  </label>   
+          </nav>
+      </header>
+      <!-- SECCION DEL CLIMA -->
+      <section id="clima" style="display: none;">
+    
+        <div id="box-clima">
+            <div class="titulo-clima"><h2></h2><h5 class="cerrar">cerrar X</h5></div>
+            <div class="actual">
+                <img class='imgActual'src="" alt="">
+                <div>
+                    <h2 class="descripcionActual"></h2>
+                    <h2 class="tempActual"></h2>
+                </div>
+            </div>
+            <div class="dia0 chiquitos">
+                <h3 class="diaSemana0"></h3>
+                <img class='imgDia0'src="" alt="">
+                <h6 class="descripcionDia0"></h6>
+                <h4 class="tempMinDia0"></h4>
+                <h4 class="tempMaxDia0"></h4>
+            </div>
+            <div class="dia1 chiquitos">
+                <h3 class="diaSemana1"></h3>
+                <img class='imgDia1'src="" alt="">
+                <h6 class="descripcionDia1"></h6>
+                <h4 class="tempMinDia1"></h4>
+                <h4 class="tempMaxDia1"></h4>
+            </div>
+            <div class="dia2 chiquitos">
+                <h3 class='diaSemana2'></h3>
+                <img class='imgDia2'src="" alt="">
+                <h6 class="descripcionDia2"></h6>
+                <h4 class="tempMinDia2"></h4>
+                <h4 class="tempMaxDia2"></h4>
+            </div>
+            <div class="dia3 chiquitos">
+                <h3 class="diaSemana3"></h3>
+                <img class='imgDia3'src="" alt="">
+                <h6 class="descripcionDia3"></h6>
+                <h4 class="tempMinDia3"></h4>
+                <h4 class="tempMaxDia3"></h4>
+            </div>
+            <div class="dia4 chiquitos">        
+                <h3 class="diaSemana4"></h3>
+                <img class='imgDia4'src="" alt="">
+                <h6 class="descripcionDia4"></h6>
+                <h4 class="tempMinDia4"></h4>
+                <h4 class="tempMaxDia4"></h4>
+            </div>
+        </div>
+    
+      </section>
+      <!-- FIN SECCION CLIMA -->
+    <main>
+      <br><br><br><br><br>
+      <section
+        style="
+          background-color: rgb(171, 234, 237);
+          margin: 10px auto;
+          width: 400px;
+          padding: 20px;
+          border-radius: 15px;
+        "
+      >
+        <h1>Su Reserva:</h1>
+        <br />
+        <div class="mb-3">
+          <h5>Dato de la reserva</h5>
+          <h6>Codigo de reserva: <span id="id"></span></h6>
+          <h6>Check-in: <span id="checkin"></span></h6>
+          <h6>Check-out: <span id="checkout"></span></h6>
+          <h6>Habitación: <span id="habitacion"></span></h6>
+          <h6>Precio final: <span id="precio"></span></h6>
+        </div>
+        <div class="mb-3">
+          <h5>Datos Personales</h5>
+          <h6>Nombre: <span id="nombre"></span></h6>
+          <h6>Apellido: <span id="apellido"></span></h6>
+          <h6>Telefono: <span id="telefono"></span></h6>
+          <h6>Email: <span id="email"></span></h6>
+          <h6>Comentario: <span id="comentario"></span></h6>
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="modificar()">
+          Modificar Datos
+        </button>
+
+        <button type="button" class="btn btn-danger" onclick="eliminar()">
+          Eliminar
+        </button>
+      </section>
+    </main>
+    <br><br>
+    <footer>
+      <section class="pie-pagina">
+          
+          <div class="contacto">
+              <p>
+                  Telefono de información <br>
+                  (+54 11) 5786-7676</p>
+          </div>
+          <div class="redes">
+             <a href="https://www.facebook.com/" class="red" target="_blank">
+            <i class="fa-brands fa-facebook"></i>  
+            </a> 
+            <a href="https://www.instagram.com/" class="red" target="_blank">
+            <i class="fa-brands fa-instagram"></i>  
+            </a> 
+            <a href="https://web.whatsapp.com/" class="red" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>   
+            </a> 
+          </div>
+          <div class="copy"><p>© 2023. Todos los derechos reservados</p></div>
+          
+      </section>
+  </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/main.js"></script>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="../js/reserva.js"></script>
+  </body>
+</html>

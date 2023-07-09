@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Braah+One&family=Dosis:wght@300&family=Roboto+Condensed:wght@300;700&family=Rubik:wght@300;500;600;700;800;900&family=Ysabeau:wght@1;100;500&display=swap" rel="stylesheet">
+    <!-- iconos -->
+    <script src="https://kit.fontawesome.com/25d52df83b.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/estilo.css">
+    <link rel="icon" type="image/png" href="../imggg/icono H.png"/>
+    <link rel="stylesheet" href="../css/estilo-habitaciones.css">
+    <title>Consultas - Hotel Presidente</title>
+  </head>
+
+  <body>
+    <header>
+      <h2 class="logo">Hotel <br> Presidente</h2>
+      <a href="../index.html" class="enlace">
+          <img src="../imggg/logo-hotel-presidente-01.png">
+      </a>
+      <input type="checkbox" id="check">
+      <label for="check" class="mostrar-menu">
+          &#8801
+      </label>
+      <nav class="menu">
+              <a href="../pages/consultas.html">RESERVA</a>
+              <a href="../pages/habitaciones.html">HABITACIONES/TARIFAS</a>
+              <a href="../pages/servicios.html">SERVICIOS</a>
+              <a href="../pages/contacto.html">CONTACTO</a>
+              <a onclick=javascript:abrirClima()>CLIMA</a>
+              <label for="check" class="esconder-menu">
+              &#215
+              </label>   
+      </nav>
+  </header>
+  <!-- SECCION DEL CLIMA -->
+  <section id="clima" style="display: none;">
+
+    <div id="box-clima">
+        <div class="titulo-clima"><h2></h2><h5 class="cerrar">cerrar X</h5></div>
+        <div class="actual">
+            <img class='imgActual'src="" alt="">
+            <div>
+                <h2 class="descripcionActual"></h2>
+                <h2 class="tempActual"></h2>
+            </div>
+        </div>
+        <div class="dia0 chiquitos">
+            <h3 class="diaSemana0"></h3>
+            <img class='imgDia0'src="" alt="">
+            <h6 class="descripcionDia0"></h6>
+            <h4 class="tempMinDia0"></h4>
+            <h4 class="tempMaxDia0"></h4>
+        </div>
+        <div class="dia1 chiquitos">
+            <h3 class="diaSemana1"></h3>
+            <img class='imgDia1'src="" alt="">
+            <h6 class="descripcionDia1"></h6>
+            <h4 class="tempMinDia1"></h4>
+            <h4 class="tempMaxDia1"></h4>
+        </div>
+        <div class="dia2 chiquitos">
+            <h3 class='diaSemana2'></h3>
+            <img class='imgDia2'src="" alt="">
+            <h6 class="descripcionDia2"></h6>
+            <h4 class="tempMinDia2"></h4>
+            <h4 class="tempMaxDia2"></h4>
+        </div>
+        <div class="dia3 chiquitos">
+            <h3 class="diaSemana3"></h3>
+            <img class='imgDia3'src="" alt="">
+            <h6 class="descripcionDia3"></h6>
+            <h4 class="tempMinDia3"></h4>
+            <h4 class="tempMaxDia3"></h4>
+        </div>
+        <div class="dia4 chiquitos">        
+            <h3 class="diaSemana4"></h3>
+            <img class='imgDia4'src="" alt="">
+            <h6 class="descripcionDia4"></h6>
+            <h4 class="tempMinDia4"></h4>
+            <h4 class="tempMaxDia4"></h4>
+        </div>
+    </div>
+
+  </section>
+  <!-- FIN SECCION CLIMA -->
+    <main id="res">
+      <br><br><br><br><br>
+      <div class="container">
+      <section id="error_sinLugar">{{error_dispo}}</section>
+      <section v-if="error">Lo sentimos se produjo un error</section>
+      <section v-else>
+          <section v-if="cargando" style="margin: 5px auto;">
+              <div class="spinner-border"></div>
+              <p>Cargando .....</p>
+
+          </section>
+
+      <section v-else class="container" id="form_consulta">
+        <div id="sin_dispo"></div>
+        
+        <div v-if="formulario">
+        <form
+          style="
+            background-color: rgb(171, 234, 237);
+            margin: 10px auto;
+            width: 400px;
+            padding: 20px;
+            border-radius: 15px;
+          "
+        >
+          <h1>Consultar Disponibilidad</h1>
+          <div class="mb-3">
+            <label for="checkin">Check-in</label>
+            <input type="date" name="checkin" id="checkin" />
+          </div>
+          <div class="mb-3">
+            <label for="checkout">check-out</label>
+            <input type="date" name="checkout" id="checkout" />
+          </div>
+          <div class="mb-3">
+            <label for="habit">Habitacion</label>
+            <select name="habit" id="habit">
+              <option value="sencilla">Habitación Sencilla</option>
+              <option value="doble" >Habitación Doble</option>
+              <option value="jr_suite">Habitación jr Suite</option>
+              <option value="deluxe">Habitación Deluxe</option>
+            </select>
+          </div>
+          <button
+            type="button"
+            class="btn btn-success"
+            v-on:click="consultar()"
+          >
+            Consultar
+          </button>
+        </form>
+
+        <br>
+        <h6 id="error_busqueda">{{error_buscar}}</h6>
+          <form style="
+              background-color: rgb(171, 234, 237);
+              margin: 10px auto;
+              width: 400px;
+              padding: 20px;
+              border-radius: 15px;
+            "
+          >
+
+            <h1>Buscar Reserva</h1>
+            <div class="mb-3">
+              <label for="codigo">Ingrese su codigo de Reserva:</label>
+              <input type="number" name="codigo" id="codigo" />
+            </div>
+            <button
+              type="button"
+              class="btn btn-success"
+             v-on:click="buscar()"
+            >
+              Buscar
+            </button>
+          </form>
+        </div>
+
+
+
+        <form v-else         style="
+        background-color: rgb(171, 234, 237);
+        margin: 10px auto;
+        width: 400px;
+        padding: 20px;
+        border-radius: 15px;
+      "
+    >
+      <h1>Reservar</h1>
+      <div class="mb-3">
+        <h6>Check-in: {{respuesta.ingreso}}</h6>
+        <h6>Check-out: {{respuesta.salida}}</h6>
+        <h6>Cantidad de noches: {{respuesta.cantidad_noches}}</h6>
+        <h6>Habitación: {{respuesta.habit}}</h6>
+        <h6>Precio final: ${{respuesta.precio}}</h6>
+      </div>
+      <h5>Datos Personales</h5>
+      <div class="mb-3">
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" id="nombre"/>
+      </div>
+      <div class="mb-3">
+        <label for="apellido">Apellido</label>
+        <input type="text" name="apellido" id='apellido'/>
+      </div>
+      <div class="mb-3">
+        <label for="telefono">Telefono</label>
+        <input type="tel" name="telefono" id="telefono"/>
+      </div>
+      <div class="mb-3">
+        <label for="email">E-Mail</label>
+        <input type="email" name="email" id="email"/>
+      </div>
+      <div class="mb-3">
+        <label for="comentario">Comentario</label>
+        <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+      </div>
+      <button
+        type="button"
+        class="btn btn-success"
+        v-on:click="reservar()"
+      >
+        Reservar
+      </button></form>
+      </section>
+    </div>
+    </main>
+    <footer>
+      <section class="pie-pagina">
+          
+          <div class="contacto">
+              <p>
+                  Telefono de información <br>
+                  (+54 11) 5786-7676</p>
+          </div>
+          <div class="redes">
+             <a href="https://www.facebook.com/" class="red" target="_blank">
+            <i class="fa-brands fa-facebook"></i>  
+            </a> 
+            <a href="https://www.instagram.com/" class="red" target="_blank">
+            <i class="fa-brands fa-instagram"></i>  
+            </a> 
+            <a href="https://web.whatsapp.com/" class="red" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>   
+            </a> 
+          </div>
+          <div class="copy"><p>© 2023. Todos los derechos reservados</p></div>
+          
+      </section>
+  </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../js/consultas.js"></script>
+  </body>
+</html>
